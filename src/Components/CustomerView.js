@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Card, Col, Row, Toast} from "react-bootstrap";
 import SockJsClient from 'react-stomp';
-
-
-import MyToast from "./MyToast";
+import ClientChat from "./ClientChat";
 
 
 const CustomerView = (props) => {
@@ -12,8 +10,6 @@ const CustomerView = (props) => {
 
     const [showToast,setshowToast]=useState(false);
     const [messageForToast,setmessageForToast]=useState("");
-
-
 
     const hideToast =  () => {
         setshowToast(false);
@@ -34,7 +30,7 @@ const CustomerView = (props) => {
             <Row>
 
                 <Col>
-                    <Card body className="cardA" style={{ width: '30rem' }}>
+                    <Card body className="cardA" style={{ width: '30rem',marginBottom:'5rem'}}>
                         welcome {props.username} .
                     </Card>
                 </Col>
@@ -50,6 +46,7 @@ const CustomerView = (props) => {
                         </Toast>
 
                 </Col>
+                <ClientChat username={props.username}/>
             </Row>
             <SockJsClient
                 url={SOCKET_URL}

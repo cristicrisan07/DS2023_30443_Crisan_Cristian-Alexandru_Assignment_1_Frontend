@@ -1,0 +1,44 @@
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-list {
+    padding: 4px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.chat-input {
+    margin: 4px 0 4px 4px;
+}
+
+.chat-input textarea {
+    border-radius: 5px;
+    outline: none;
+    background:transparent;
+    width: 100%;
+    color:white;
+}
+
+.chatline {
+    background-color: #2cddaf;
+    padding: 8px;
+    border-radius: 14px;
+    margin: 4px;
+    color: white;
+}
+
+.chatline-mine {
+    border-bottom-right-radius: 0;
+}
+
+.chatline-friend {
+    border-top-left-radius: 0;
+    background-color: white;
+    color:#2cddaf;
+}
+
+.chatline-msg {
+    padding: 4px;
+}

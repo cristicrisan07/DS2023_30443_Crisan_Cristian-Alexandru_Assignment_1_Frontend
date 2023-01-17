@@ -3,6 +3,7 @@ import {Tab, Tabs} from "react-bootstrap";
 import SingleSelect from "../SingleSelect";
 import ClientsCRUDView from "./CRUD/ClientsCRUDView";
 import MeteringDevicesCRUDView from "./CRUD/MeteringDevicesCRUDView";
+import ClientChat from "../ClientChat";
 
 
 const AdminViewIndex = (props) => {
@@ -31,7 +32,9 @@ const AdminViewIndex = (props) => {
             <Tab eventKey="metering-devices" title="MeteringDevices">
                 <MeteringDevicesCRUDView/>
             </Tab>
-
+            <Tab eventKey="chat" title={"Chat"}>
+                <ClientChat username={props.username}/>
+            </Tab>
         </Tabs>
 
 

@@ -1,0 +1,10 @@
+.chatpage {
+    display: flex;
+    border: 1px solid darkgrey;
+    height: 100%;
+}
+
+.chatpage-section {
+    flex: 2;
+    width:50vw;
+}
